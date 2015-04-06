@@ -9,32 +9,28 @@ Here, the first 114 Notifications :)
 ###Registering System Notifications 
 
 ```objc
-
-	- (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block;
-	- (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block error:(NSError **)error;
+- (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block;
+- (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block error:(NSError **)error;
 ```
 
 With error catching, because some notifications are iOS version dependant
 ```objc
-
-	BOOL addObserverSucessfully = [self jm_observeNotification:JMUserDefaultsDidChangeNotification usingBlock:^(NSNotification *notif) {
-        NSLog(@"JMUserDefaultsDidChangeNotification");
-    }];
+BOOL addObserverSucessfully = [self jm_observeNotification:JMUserDefaultsDidChangeNotification usingBlock:^(NSNotification *notif) {
+	NSLog(@"JMUserDefaultsDidChangeNotification");
+}];
 	
-    NSError *error;
-	[self jm_observeNotification:JMUserDefaultsDidChangeNotification usingBlock:^(NSNotification *notif) {
-        NSLog(@"JMUserDefaultsDidChangeNotification");
-    } error:&error];
+NSError *error;
+[self jm_observeNotification:JMUserDefaultsDidChangeNotification usingBlock:^(NSNotification *notif) {
+	NSLog(@"JMUserDefaultsDidChangeNotification");
+} error:&error];
 ```
 
 ###Unregistering System Notifications 
 
 ```objc
-
-	- (void)jm_removeObservedNotification:(JMSystemNotification)notification;
-	- (void)jm_removeObservedNotifications;
+- (void)jm_removeObservedNotification:(JMSystemNotification)notification;
+- (void)jm_removeObservedNotifications;
 ```
-
 
 ### Todo
 * AVFoundation
