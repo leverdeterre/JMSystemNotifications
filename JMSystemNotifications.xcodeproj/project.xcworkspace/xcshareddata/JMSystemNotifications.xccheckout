@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>24ADDF4F-CCEC-4235-A2BF-C90BA148B730</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JMSystemNotifications</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A24E30016C6DDFA18E28B8D7C175D0FCC691CA05</key>
+		<string>https://github.com/leverdeterre/JMSystemNotifications.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JMSystemNotifications.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A24E30016C6DDFA18E28B8D7C175D0FCC691CA05</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leverdeterre/JMSystemNotifications.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A24E30016C6DDFA18E28B8D7C175D0FCC691CA05</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A24E30016C6DDFA18E28B8D7C175D0FCC691CA05</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JMSystemNotifications</string>
+		</dict>
+	</array>
+</dict>
+</plist>
