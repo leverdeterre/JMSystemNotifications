@@ -4,8 +4,6 @@ JMSystemNotifications is an Objective-C library for easily register OS System no
 Do you all the possible notifications send by the system.
 Here, the first 114 Notifications :)
 
-![Image](./screenshots/merged_demos.png)
-
 ###Registering System Notifications 
 
 ```objc
