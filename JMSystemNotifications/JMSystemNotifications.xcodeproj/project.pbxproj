@@ -14,6 +14,10 @@
 		C2D3F2491AD2C90E0054AFB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D3F2481AD2C90E0054AFB5 /* Images.xcassets */; };
 		C2D3F24C1AD2C90E0054AFB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D3F24A1AD2C90E0054AFB5 /* LaunchScreen.xib */; };
 		C2D3F2581AD2C90E0054AFB5 /* JMSystemNotificationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D3F2571AD2C90E0054AFB5 /* JMSystemNotificationsTests.m */; };
+		C2D3F2661AD2C9CE0054AFB5 /* NSError+JMSystemNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D3F2631AD2C9CE0054AFB5 /* NSError+JMSystemNotification.m */; };
+		C2D3F2671AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D3F2651AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.m */; };
+		C2D3F26C1AD2CA0C0054AFB5 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D3F2691AD2CA0C0054AFB5 /* DemoModel.m */; };
+		C2D3F26D1AD2CA0C0054AFB5 /* JMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D3F26B1AD2CA0C0054AFB5 /* JMTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		C2D3F2511AD2C90E0054AFB5 /* JMSystemNotificationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMSystemNotificationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D3F2561AD2C90E0054AFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D3F2571AD2C90E0054AFB5 /* JMSystemNotificationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSystemNotificationsTests.m; sourceTree = "<group>"; };
+		C2D3F2621AD2C9CE0054AFB5 /* NSError+JMSystemNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+JMSystemNotification.h"; sourceTree = "<group>"; };
+		C2D3F2631AD2C9CE0054AFB5 /* NSError+JMSystemNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+JMSystemNotification.m"; sourceTree = "<group>"; };
+		C2D3F2641AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JMSystemNotification.h"; sourceTree = "<group>"; };
+		C2D3F2651AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JMSystemNotification.m"; sourceTree = "<group>"; };
+		C2D3F2681AD2CA0C0054AFB5 /* DemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
+		C2D3F2691AD2CA0C0054AFB5 /* DemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
+		C2D3F26A1AD2CA0C0054AFB5 /* JMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTableViewCell.h; sourceTree = "<group>"; };
+		C2D3F26B1AD2CA0C0054AFB5 /* JMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +93,15 @@
 		C2D3F23A1AD2C90E0054AFB5 /* JMSystemNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				C2D3F2611AD2C9CE0054AFB5 /* JMSystemNotifications */,
 				C2D3F23F1AD2C90E0054AFB5 /* AppDelegate.h */,
 				C2D3F2401AD2C90E0054AFB5 /* AppDelegate.m */,
 				C2D3F2421AD2C90E0054AFB5 /* ViewController.h */,
 				C2D3F2431AD2C90E0054AFB5 /* ViewController.m */,
+				C2D3F2681AD2CA0C0054AFB5 /* DemoModel.h */,
+				C2D3F2691AD2CA0C0054AFB5 /* DemoModel.m */,
+				C2D3F26A1AD2CA0C0054AFB5 /* JMTableViewCell.h */,
+				C2D3F26B1AD2CA0C0054AFB5 /* JMTableViewCell.m */,
 				C2D3F2451AD2C90E0054AFB5 /* Main.storyboard */,
 				C2D3F2481AD2C90E0054AFB5 /* Images.xcassets */,
 				C2D3F24A1AD2C90E0054AFB5 /* LaunchScreen.xib */,
@@ -117,6 +134,17 @@
 				C2D3F2561AD2C90E0054AFB5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2D3F2611AD2C9CE0054AFB5 /* JMSystemNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				C2D3F2621AD2C9CE0054AFB5 /* NSError+JMSystemNotification.h */,
+				C2D3F2631AD2C9CE0054AFB5 /* NSError+JMSystemNotification.m */,
+				C2D3F2641AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.h */,
+				C2D3F2651AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.m */,
+			);
+			path = JMSystemNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D3F26C1AD2CA0C0054AFB5 /* DemoModel.m in Sources */,
 				C2D3F2441AD2C90E0054AFB5 /* ViewController.m in Sources */,
+				C2D3F2671AD2C9CE0054AFB5 /* NSObject+JMSystemNotification.m in Sources */,
 				C2D3F2411AD2C90E0054AFB5 /* AppDelegate.m in Sources */,
+				C2D3F26D1AD2CA0C0054AFB5 /* JMTableViewCell.m in Sources */,
+				C2D3F2661AD2C9CE0054AFB5 /* NSError+JMSystemNotification.m in Sources */,
 				C2D3F23E1AD2C90E0054AFB5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JMSystemNotifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JMSystemNotifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
