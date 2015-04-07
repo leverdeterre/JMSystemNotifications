@@ -35,7 +35,7 @@ NSError *error;
 ```
 
 ### Current observed notifications 
-```objc
+```
 NSTextStorageWillProcessEditingNotification;
 NSTextStorageDidProcessEditingNotification;
 UIWindowDidBecomeVisibleNotification;
