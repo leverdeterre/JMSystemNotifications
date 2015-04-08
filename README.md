@@ -11,6 +11,8 @@ Here, the first 114 Notifications :)
 ###Registering System Notifications 
 
 ```objc
+  #import "NSObject+JMSystemNotification.h"
+
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block;
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block error:(NSError **)error;
 ```
