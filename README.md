@@ -8,10 +8,18 @@ Here, the first 114 Notifications :)
 - NSNotificationName can be OS version dependant, 
 - Do you know those available notifications?
 
-###Registering System Notifications 
+# Usage
+```
+   pod JMSystemNotification
+```
 
 ```objc
   #import "NSObject+JMSystemNotification.h"
+
+```
+###Registering System Notifications 
+
+```objc
 
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block;
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block error:(NSError **)error;
