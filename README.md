@@ -3,9 +3,12 @@
 JMSystemNotifications is an Objective-C library for easily register OS System notifications. 
 Here, the first 114 Notifications :)
 
+![Image](./screenshots/iphone4_ios7.png)
+![Image](./screenshots/iphone5_ios8.png)
+
 ###Why ?
-- Registering NSNotification using a block required to retain the id the observer,
-- NSNotificationName can be OS version dependant, 
+- Registering/unregistering using a block API for NSNotification is very boring,
+- NSNotificationName can be OS version dependant (iOS version in check, no crash), 
 - Do you know those available notifications?
 
 # Usage
@@ -15,7 +18,6 @@ Here, the first 114 Notifications :)
 
 ```objc
   #import "NSObject+JMSystemNotification.h"
-
 ```
 ###Registering System Notifications 
 
