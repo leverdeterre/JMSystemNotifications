@@ -1,14 +1,26 @@
 ##JMSystemNotifications
 
 JMSystemNotifications is an Objective-C library for easily register OS System notifications. 
-Do you all the possible notifications send by the system.
 Here, the first 114 Notifications :)
 
-![Image](./screenshots/merged_demos.png)
+###Why ?
+- Registering NSNotification using a block required to retain the id the observer,
+- NSNotificationName can be OS version dependant, 
+- Do you know those available notifications?
 
+# Usage
+```
+   pod JMSystemNotification
+```
+
+```objc
+  #import "NSObject+JMSystemNotification.h"
+
+```
 ###Registering System Notifications 
 
 ```objc
+
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block;
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block error:(NSError **)error;
 ```
@@ -31,6 +43,133 @@ NSError *error;
 - (void)jm_removeObservedNotification:(JMSystemNotification)notification;
 - (void)jm_removeObservedNotifications;
 ```
+
+### Current observed notifications 
+```
+NSTextStorageWillProcessEditingNotification;
+NSTextStorageDidProcessEditingNotification;
+UIWindowDidBecomeVisibleNotification;
+UIWindowDidBecomeHiddenNotification;
+UIWindowDidBecomeKeyNotification;
+UIWindowDidResignKeyNotification;
+UIKeyboardWillShowNotification;
+UIKeyboardDidShowNotification;
+UIKeyboardWillHideNotification;
+UIKeyboardDidHideNotification;
+UIKeyboardWillChangeFrameNotification;
+UIKeyboardDidChangeFrameNotification;
+UITextFieldTextDidBeginEditingNotification;
+UITextFieldTextDidEndEditingNotification;
+UITextFieldTextDidChangeNotification;
+UIAccessibilityPostNotification;
+UIAccessibilityMonoAudioStatusDidChangeNotification);
+UIAccessibilityClosedCaptioningStatusDidChangeNotification);
+UIAccessibilityInvertColorsStatusDidChangeNotification);
+UIAccessibilityGuidedAccessStatusDidChangeNotification);
+UIAccessibilityBoldTextStatusDidChangeNotification);
+UIAccessibilityGrayscaleStatusDidChangeNotification);
+UIAccessibilityReduceTransparencyStatusDidChangeNotification);
+UIAccessibilityReduceMotionStatusDidChangeNotification);
+UIAccessibilityDarkerSystemColorsStatusDidChangeNotification);
+UIAccessibilitySwitchControlStatusDidChangeNotification);
+UIAccessibilitySpeakSelectionStatusDidChangeNotification); 
+UIAccessibilitySpeakScreenStatusDidChangeNotification);
+UIAccessibilityScreenChangedNotification;
+UIAccessibilityLayoutChangedNotification;
+UIAccessibilityAnnouncementNotification;
+UIAccessibilityAnnouncementDidFinishNotification;
+UIAccessibilityPageScrolledNotification;
+UIAccessibilityPauseAssistiveTechnologyNotification;
+UIAccessibilityResumeAssistiveTechnologyNotification;
+UIAccessibilityNotificationSwitchControlIdentifier);
+UIApplicationDidEnterBackgroundNotification;
+UIApplicationWillEnterForegroundNotification;
+UIApplicationDidFinishLaunchingNotification;
+UIApplicationDidBecomeActiveNotification;
+UIApplicationWillResignActiveNotification;
+UIApplicationDidReceiveMemoryWarningNotification;
+UIApplicationWillTerminateNotification;
+UIApplicationSignificantTimeChangeNotification;
+UIApplicationWillChangeStatusBarOrientationNotification;
+UIApplicationDidChangeStatusBarOrientationNotification;
+UIApplicationWillChangeStatusBarFrameNotification;
+UIApplicationDidChangeStatusBarFrameNotification;
+UIApplicationBackgroundRefreshStatusDidChangeNotification;
+UIApplicationUserDidTakeScreenshotNotification);
+UIContentSizeCategoryDidChangeNotification;
+UIDeviceOrientationDidChangeNotification;
+UIDeviceBatteryStateDidChangeNotification;
+UIDeviceBatteryLevelDidChangeNotification; 
+UIDeviceProximityStateDidChangeNotification; 
+UIDocumentStateChangedNotification;
+UIMenuControllerWillShowMenuNotification;
+UIMenuControllerDidShowMenuNotification;
+UIMenuControllerWillHideMenuNotification;
+UIMenuControllerDidHideMenuNotification;
+UIMenuControllerMenuFrameDidChangeNotification;
+UIPasteboardChangedNotification;
+UIPasteboardRemovedNotification;
+UIScreenDidConnectNotification;
+UIScreenDidDisconnectNotification; 
+UIScreenModeDidChangeNotification; 
+UIScreenBrightnessDidChangeNotification; 
+UITableViewSelectionDidChangeNotification;
+UITextInputCurrentInputModeDidChangeNotification;
+UITextViewTextDidBeginEditingNotification;
+UITextViewTextDidChangeNotification;
+UITextViewTextDidEndEditingNotification;
+UIViewControllerShowDetailTargetDidChangeNotification;
+NSManagedObjectContextWillSaveNotification;
+NSManagedObjectContextDidSaveNotification;
+NSManagedObjectContextObjectsDidChangeNotification;
+NSPersistentStoreDidImportUbiquitousContentChangesNotification;
+NSPersistentStoreCoordinatorStoresWillChangeNotification;
+NSPersistentStoreCoordinatorStoresDidChangeNotification;
+NSBundleDidLoadNotification;
+NSCalendarDayChangedNotification;
+NSSystemClockDidChangeNotification;
+NSExtensionHostWillEnterForegroundNotification;
+NSExtensionHostDidEnterBackgroundNotification;
+NSExtensionHostWillResignActiveNotification;
+NSExtensionHostDidBecomeActiveNotification;
+NSFileHandleReadCompletionNotification;
+NSFileHandleReadToEndOfFileCompletionNotification;
+NSFileHandleConnectionAcceptedNotification;
+NSFileHandleDataAvailableNotification;
+NSFileHandleNotificationDataItem;
+NSFileHandleNotificationFileHandleItem;
+NSFileHandleNotificationMonitorModes;
+NSUbiquityIdentityDidChangeNotification;
+NSHTTPCookieManagerAcceptPolicyChangedNotification;
+NSHTTPCookieManagerCookiesChangedNotification;
+NSCurrentLocaleDidChangeNotification;
+NSMetadataQueryDidStartGatheringNotification;
+NSMetadataQueryGatheringProgressNotification;
+NSMetadataQueryDidFinishGatheringNotification;
+NSMetadataQueryDidUpdateNotification;
+NSPortDidBecomeInvalidNotification;
+NSWillBecomeMultiThreadedNotification;
+NSDidBecomeSingleThreadedNotification;
+NSThreadWillExitNotification;
+NSSystemTimeZoneDidChangeNotification;
+NSUbiquitousKeyValueStoreDidChangeExternallyNotification;
+NSUndoManagerCheckpointNotification;
+NSUndoManagerWillUndoChangeNotification;
+NSUndoManagerWillRedoChangeNotification;
+NSUndoManagerDidUndoChangeNotification;
+NSUndoManagerDidRedoChangeNotification;
+NSUndoManagerDidOpenUndoGroupNotification;
+NSUndoManagerWillCloseUndoGroupNotification;
+NSUndoManagerDidCloseUndoGroupNotification
+NSURLCredentialStorageChangedNotification;
+NSUserDefaultsDidChangeNotification;
+ALAssetsLibraryChangedNotification;
+ACAccountStoreDidChangeNotification;
+PKPassLibraryDidChangeNotification;
+EKEventStoreChangedNotification;
+MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification;
+```
+
 
 ### Todo
 * AVFoundation
