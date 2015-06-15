@@ -233,9 +233,11 @@ typedef void(^JMNotificationBlock)(NSNotification *notif);
 
 @interface NSObject (JMSystemNotification)
 
+- (BOOL)jm_observeNotificationName:(NSString *)notificationName usingBlock:(JMNotificationBlock)block;
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block;
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block error:(NSError **)error;
 
+- (void)jm_removeObservedNotificationName:(NSString *)notificationName;
 - (void)jm_removeObservedNotification:(JMSystemNotification)notification;
 - (void)jm_removeObservedNotifications;
 

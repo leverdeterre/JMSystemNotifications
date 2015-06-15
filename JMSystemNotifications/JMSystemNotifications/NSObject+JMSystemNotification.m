@@ -335,6 +335,22 @@ NSString * JMSystemNotificationName(JMSystemNotification num)
 
 #pragma mark - add
 
+- (BOOL)jm_observeNotificationName:(NSString *)notificationName usingBlock:(JMNotificationBlock)block
+{
+    if ([self isAlreadyObservingNotificationName:notificationName]) {
+        return NO;
+    }
+    
+    id notificationId = [[NSNotificationCenter defaultCenter] addObserverForName:notificationName
+                                                                          object:nil
+                                                                           queue:nil
+                                                                      usingBlock:^(NSNotification *note) {
+                                                                          block(note);
+                                                                      }];
+    [self jm_addObservedNotificationName:notificationName notificationId:notificationId];
+    return YES;
+}
+
 - (BOOL)jm_observeNotification:(JMSystemNotification)notification usingBlock:(JMNotificationBlock)block
 {
     return [self jm_observeNotification:notification usingBlock:block error:NULL];
@@ -387,7 +403,7 @@ NSString * JMSystemNotificationName(JMSystemNotification num)
     if (observedDict.allKeys) {
         [observedDict.allKeys enumerateObjectsUsingBlock:^(NSString *notificationName, NSUInteger idx, BOOL *stop) {
             [[NSNotificationCenter defaultCenter] removeObserver:[observedDict objectForKey:notificationName]];
-            NSLog(@"jm_removeObservedNotification : %@",notificationName);
+            //NSLog(@"jm_removeObservedNotification : %@",notificationName);
         }];
         
         [self jm_setObservedNotificationDictionary:[NSMutableDictionary new]];
